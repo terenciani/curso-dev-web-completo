@@ -1,0 +1,106 @@
+    {% extends "layout.html" %}
+
+    {% block title %}
+        <title>IF -CLASSROOM</title>
+    {% endblock title %}
+
+    {% block styles %}
+        <link rel="stylesheet" href="styles/videos.css">
+        <link rel="stylesheet" href="styles/painel.css">
+    {% endblock styles %}
+
+    {% block header %}
+        <div id="header">
+            <div class="head">
+                <div id="logo">
+                    <a href="">
+                        <img src="imagens/logo.png" alt="">
+                    </a>
+                </div>
+                <div id="menu">
+                    <a href="">Home</a>
+                    <a href=""><img src="imagens/mega fone.png" alt=""> Extra Aula</a>
+                    <a href=""><img src="imagens/calendar.png" alt=""> Calendário</a>
+                    <a href=""><img src="imagens/boletim.png" alt=""> Boletim</a>
+                </div>
+                <div id="perfil">
+                    <span id="nome" class="branco">{{ user.user_name }}</span><span class="branco"> | </span><span id="turma" class="branco">{{ user.user_classroom }}</span>
+                    <img src="uploads/{{ user.user_image }}" alt="">
+                </div>
+            </div>
+        </div>
+    {% endblock header %}
+
+    {% block principal %}
+        <div id="principal">
+            <div id="botao">
+                <a href="/tarefas"><button>Tarefas</button></a>
+                <a href="/videos"><button class="roxo">Videos</button></a>
+                <a href="/materias"><button>Matérias</button></a>
+                <a href="/conceitos"><button>Conceitos</button></a>
+            </div>
+            <div id="quadrado">
+                <div class="select">
+                    <p>Classificar por:</p>
+                    <select name="" id="">
+                        <option value="">Recentes</option>
+                        <option value="">Mais Antigos</option>
+                    </select>
+                </div>
+                <div class="scroll">
+                    <div id="videos">
+                        <a href="">
+                            <div id="video" class="video">
+                                <div class="text-video">
+                                    <b>
+                                        <p id="date-video">03/04/2021 - 19:30</p>
+                                        <p id="title-video">Aula Polinomios e Equacoes...</p>
+                                    </b>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div id="video" class="video">
+                                <div class="text-video">
+                                    <b>
+                                        <p id="date-video">03/04/2021 - 19:30</p>
+                                        <p id="title-video">Aula Polinomios e Equacoes...</p>
+                                    </b>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div id="video" class="video">
+                                <div class="text-video">
+                                    <b>
+                                        <p id="date-video">03/04/2021 - 19:30</p>
+                                        <p id="title-video">Aula Polinomios e Equacoes...</p>
+                                    </b>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div id="video" class="video">
+                                <div class="text-video">
+                                    <b>
+                                        <p id="date-video">03/04/2021 - 19:30</p>
+                                        <p id="title-video">Aula Polinomios e Equacoes...</p>
+                                    </b>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div id="video" class="video">
+                                <div class="text-video">
+                                    <b>
+                                        <p id="date-video">03/04/2021 - 19:30</p>
+                                        <p id="title-video">Aula Polinomios e Equacoes...</p>
+                                    </b>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock principal %}
